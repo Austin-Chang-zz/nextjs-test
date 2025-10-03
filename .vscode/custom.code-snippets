@@ -1,0 +1,81 @@
+{
+    // Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+    // Placeholders with the same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"scope": "javascript,typescript",
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "Next.js Page Template": {
+        "prefix": "npt", //next.js page template
+        "body": [
+            "import React from 'react'",
+            "  ", // 這裡是一個空行
+            "export default function ${1:Page}() {",
+            "   return (",
+            "       <div>${2:New Page}</div>",
+            "   )",
+            "}"
+        ],
+        "description": "Create a new Next.js page"
+    },
+    // -------------------------------
+    "Console Log": {
+        "prefix": "log",
+        "body": [
+            "console.log($1, $2);"
+        ],
+        "description": "Insert console.log with tab stops"
+        // console.log(, );
+    },
+    // ---------------------------------
+    "For Loop": {
+        "prefix": "fori",
+        "body": [
+            "for (let i = 0; i < ${1:count}; i++) {",
+            "  console.log(${2:item});",
+            "}"
+        ],
+        "description": "For loop with placeholders"
+        // for (let i = 0; i < count; i++) {
+        // 	console.log(item);
+        // }
+    },
+    // ----------------------------
+    "Function": {
+        "prefix": "fn",
+        "body": [
+            "function ${1:name}(${2:params}) {",
+            "  $0",
+            "}"
+        ],
+        "description": "Function template"
+        // function name(params) {}
+    },
+    // ---------------------------------
+    "React Component": {
+        "prefix": "rfc",
+        "body": [
+            "export default function ${1:ComponentName}(${2:props}) {",
+            "  return (",
+            "    <div>$0</div>",
+            "  )",
+            "}"
+        ],
+        "description": "React functional component"
+        // export default function ComponentName(props) {
+        // 	return (
+        // 		<div>|</div>
+        // 	)
+        // }
+    }
+}
